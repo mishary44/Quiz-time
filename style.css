@@ -8,6 +8,9 @@
   --main-color: #fff4ea;
   --primary-color: #ffffff;
   --secondary-color: #009cd1;
+  --btn-color: #bdd8e9;
+  --tertiary-color1: #333;
+  --tertiary-color2: #666;
 }
 body {
   background-color: var(--main-color);
@@ -26,4 +29,57 @@ body {
   max-width: 600px;
   overflow: hidden;
   position: relative;
+}
+
+/* screens */
+.screen {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+}
+.screen.active {
+  display: block;
+}
+
+/* start-screen */
+#start-screen h1 {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+.quiz-header {
+  margin-bottom: 2rem;
+}
+#question-text {
+  line-height: 1.4;
+  color: var(--tertiary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--tertiary-color2);
+  margin-bottom: 10px;
+}
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.answers-btn {
+  background-color: var(--btn-color);
+  color: var(--tertiary-color1);
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answers-btn:hover {
+  background-color: var(--secondary-color);
+  border: var(--secondary-color);
 }
